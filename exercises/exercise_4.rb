@@ -24,3 +24,14 @@ Store.create(
   annual_revenue: 430000,
   mens_apparel: true,
   womens_apparel: true)
+
+
+@mens_stores = Store.where(mens_apparel: true)
+@mens_stores.each do |p|
+  puts "The stores name is #{p.name}, and their annual revenue is #{p.annual_revenue}"
+end
+
+@womens_stores = Store.where("annual_revenue < 1000000", womens_apparel: true)
+@womens_stores.each do |p|
+  puts "The stores name is #{p.name}, and their annual revenue is #{p.annual_revenue}"
+end
