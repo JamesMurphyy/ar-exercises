@@ -10,3 +10,11 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+print "Please provide a store name you would like to make: "
+store_name = gets.chomp
+
+Store.create(
+  name: store_name
+)
+
+puts store_name.errors.details
