@@ -17,4 +17,4 @@ Store.create(
   name: store_name
 )
 
-puts store_name.errors.details
+puts store_name.errors.message
